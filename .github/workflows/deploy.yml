@@ -28,12 +28,13 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
         env:
           CI: false
+          VITE_BASE_PATH: /2026-wakayama-/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
